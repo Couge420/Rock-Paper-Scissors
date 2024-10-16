@@ -2,11 +2,9 @@ alert("Hello Player!");
 
 alert("Welcome to Rock, paper, scissors");
 
-let humanScore = 0;
-let computerScore = 0;
 
 function getComputerChoice() {
-    let randomNumber = Math.round(Math.random() * 2 )
+    const randomNumber = Math.round(Math.random() * 2 )
     switch(randomNumber){
         case 0:
             return "rock";
@@ -18,13 +16,16 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-     playerChoice = prompt("Enter your choice. Rock, paper or scissors");
+     const playerChoice = prompt("Enter your choice. Rock, paper or scissors");
      inchoice=playerChoice.toLowerCase()
      return(inchoice);
 }
 
+let humanScore = 0;
+let computerScore = 0;
 
-function playRound() {
+
+function playRound(humanChoice, computerChoice) {
     humanChoice=getHumanChoice();
     computerChoice=getComputerChoice();
     if (humanChoice === 'rock' && computerChoice === 'paper'){
@@ -57,4 +58,32 @@ function playRound() {
             alert("You WIN!");
     }
 
+    else if (humanChoice === computerChoice){
+            alert("Tie");
+    }
+
+confirm( "Computer Score = " + " " + computerScore);
+confirm("Your Score = " + " " + humanScore);
 }
+
+function playGame() {
+    for (let i = 0; i < 5; i++) {
+    //    const humanSelection = getHumanChoice();
+    //    const computerSelection = getComputerChoice();
+        playRound();
+    }
+
+    alert('Final Scores - Human: ' + humanScore + ' ' + 'Computer: ' + computerScore);
+    if (humanScore > computerScore) {
+        alert("Congratulations! You Win!");
+    } else if (humanScore < computerScore){
+        alert("Sorry. You lose!");
+    } else {
+        alert("It's a tie!");
+    }
+
+
+}
+
+
+playGame();
