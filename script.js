@@ -67,7 +67,7 @@ confirm("Your Score = " + " " + humanScore);
 }
 
 function playGame() {
-    for (let i = 0; i < 5; i++) {
+  //  for (let i = 0; i < 5; i++) {
     //    const humanSelection = getHumanChoice();
     //    const computerSelection = getComputerChoice();
         playRound();
@@ -83,7 +83,7 @@ function playGame() {
     }
 
 
-}
+
 
 
 playGame();
