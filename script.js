@@ -73,7 +73,7 @@ function playGame() {
         playRound();
     }
 
-    alert('Final Scores - Human: ' + humanScore + ' ' + 'Computer: ' + computerScore);
+    alert('Final Scores - Human: ' + humanScore + " " + 'Computer: ' + computerScore);
     if (humanScore > computerScore) {
         alert("Congratulations! You Win!");
     } else if (humanScore < computerScore){
