@@ -2,6 +2,17 @@ alert("Hello Player!");
 
 alert("Welcome to Rock, paper, scissors");
 
+let humanScore = 0;
+let computerScore = 0;
+let roundNum = 0;
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
+const results = document.querySelector("#results");
+const score = document.querySelector("#score");
+const round = document.querySelector("#round")
+
+
 
 function getComputerChoice() {
     const randomNumber = Math.round(Math.random() * 2 )
@@ -21,8 +32,7 @@ function getHumanChoice() {
      return(inchoice);
 }
 
-let humanScore = 0;
-let computerScore = 0;
+
 
 
 function playRound(humanChoice, computerChoice) {
